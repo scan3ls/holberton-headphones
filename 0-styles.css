@@ -7,6 +7,7 @@
     --font-normal: 16px;
     --logo-base-height: 4rem;
     --logo-base-width: 22.56rem;
+    --header-section-margin: 0 1rem 0;
 }
 
 *, *:before, *:after {
@@ -30,9 +31,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 9rem;
+    padding-bottom: 4rem;
     width: 100%;
-    height: 125%;
     background-image: url(assets/images/headphones_hero_1.jpg);
     background-repeat: no-repeat;
 }
@@ -65,7 +65,7 @@ header h1 {
 .banner .logo {
     width: calc(var(--logo-base-width) / 2);
     height: calc(var(--logo-base-height) / 2);
-    margin: 2rem;
+    margin: 2rem 2rem 0;
 }
 
 .nav-menu .nav-item a:hover {
@@ -79,7 +79,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
+    margin: var(--header-section-margin);
     margin-top: 15rem;
 }
 
@@ -94,7 +94,7 @@ header h1 {
 }
 
 .action .the-button {
-    margin: 3rem;
+    margin: 2rem;
     border-style: none;
     border-radius: 2rem;
     height: 3rem;
@@ -106,7 +106,7 @@ header h1 {
 /* Disclaimer
     =======================================*/
 .disclaimer {
-    margin: 1rem;
+    margin: var(--header-section-margin);
 }
 
 .disclaimer p {
@@ -118,13 +118,13 @@ header h1 {
 @media screen and (max-width: 767px) {
 
     header {
-        background-position-x: -400px;
+        background-position-x: -450px;
     }
 
     /* Nav
         ===================================*/
     .banner nav {
-        display: none;
+        opacity: 0;
     }
 
     .banner {
@@ -183,6 +183,7 @@ header h1 {
     }
 
     .banner .menu-cb:checked ~ nav {
+        opacity: 100;
         display: flex;
         justify-content: center;
     }
@@ -194,7 +195,7 @@ header h1 {
     /* Action
         ================================================*/
     .action {
-        margin-top: 15rem;
+        margin-top: 2rem;
     }
 
 }
