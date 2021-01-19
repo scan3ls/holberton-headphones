@@ -95,6 +95,7 @@ header h1 {
 
 .action .the-button {
     margin: 2rem;
+    outline: none;
     border-style: none;
     border-radius: 2rem;
     height: 3rem;
