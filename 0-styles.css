@@ -89,6 +89,10 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+.action p {
+    text-align: center;
+}
+
 .action .the-button {
     margin: 3rem;
     border-style: none;
