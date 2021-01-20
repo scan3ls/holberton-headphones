@@ -2,8 +2,9 @@
 
 :root {
     --font-family: Arial, Helvetica, sans-serif;
-    --nav-item-hover:  rgb(226, 83, 83);
-    --botton-background: rgb(250, 103, 103);
+    --nav-item-hover:  #FF6565;
+    --botton-background: #FF6565;
+    --color-white: #FFFFFF;
     --font-normal: 16px;
     --logo-base-height: 4rem;
     --logo-base-width: 22.56rem;
@@ -38,7 +39,7 @@ a {
   }
 
   header p, header a {
-      color: white;
+      color: var(--color-white);
       font-size: var(--font-normal);
       margin: 0;
       padding: 0;
@@ -50,9 +51,13 @@ a {
   }
 
   header h1 {
-      color: white;
+      color: var(--color-white);
       margin: 0;
       padding: 0;
+  }
+
+  .the-button:hover {
+      opacity: 0.9;
   }
 
   /* Nav
@@ -100,7 +105,7 @@ a {
       border-radius: 2rem;
       height: 3rem;
       width: 12rem;
-      color: white;
+      color: var(--color-white);
       background-color: var(--botton-background);
   }
 
@@ -143,7 +148,6 @@ a {
       }
 
       .banner .menu-button .button-middle {
-          background-color: white;
           width: 1.33rem;
           height: 0.25rem;
           margin-top: 0.25rem;
@@ -151,18 +155,17 @@ a {
       }
 
       .banner .menu-button .button-top {
-          background-color: white;
           width: 2rem;
           height: 0.25rem;
       }
 
       .banner .menu-button .button-bottom {
-          background-color: white;
           width: 2rem;
           height: 0.25rem;
       }
 
       span[class^="button-"] {
+          background-color: var(--color-white);
           border-radius: 5px;
           transform-origin: left;
           transition: transform .51s ease;
