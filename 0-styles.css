@@ -1,7 +1,7 @@
 /* desktop width 1400px */
 
 :root {
-    --font-family: Arial, Helvetica, sans-serif;
+    --font-family: source-sans-pro, spin-cycle-ot, Arial;
     --nav-item-hover:  #FF6565;
     --botton-background: #FF6565;
     --color-white: #FFFFFF;
@@ -13,6 +13,16 @@
 
 *, *:before, *:after {
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: source-sans-pro;
+    src: url(assets/fonts/source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: spin-cycle-ot;
+    src: url(assets/fonts/spincycle_ot/spincycle_ot.otf);
 }
 
 body {
