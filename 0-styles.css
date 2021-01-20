@@ -26,213 +26,212 @@ a {
 }
 
 /* Header Section */
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 4rem;
+      width: 100%;
+      min-height: 85vh;
+      background-image: url(assets/images/headphones_hero_1.jpg);
+      background-repeat: no-repeat;
+  }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 4rem;
-    width: 100%;
-    min-height: 85vh;
-    background-image: url(assets/images/headphones_hero_1.jpg);
-    background-repeat: no-repeat;
-}
+  header p, header a {
+      color: white;
+      font-size: var(--font-normal);
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+  }
 
-header p, header a {
-    color: white;
-    font-size: var(--font-normal);
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
+  header ul {
+      list-style-type: none;
+  }
 
-header ul {
-    list-style-type: none;
-}
+  header h1 {
+      color: white;
+      margin: 0;
+      padding: 0;
+  }
 
-header h1 {
-    color: white;
-    margin: 0;
-    padding: 0;
-}
+  /* Nav
+      ====================================*/
 
-/* Nav
-    ====================================*/
+  .banner .menu-cb {
+      display: none;
+  }
 
-.banner .menu-cb {
-    display: none;
-}
+  .banner .logo {
+      width: calc(var(--logo-base-width) / 2);
+      height: calc(var(--logo-base-height) / 2);
+      margin: 2rem 2rem 0;
+  }
 
-.banner .logo {
-    width: calc(var(--logo-base-width) / 2);
-    height: calc(var(--logo-base-height) / 2);
-    margin: 2rem 2rem 0;
-}
+  .nav-menu .nav-item a:hover {
+      color: var(--nav-item-hover);
+  }
 
-.nav-menu .nav-item a:hover {
-    color: var(--nav-item-hover);
-}
+  /* Action
+      ======================================*/
 
-/* Action
-    ======================================*/
+  .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: var(--header-section-margin);
+      margin-top: 15rem;
+  }
 
-.action {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: var(--header-section-margin);
-    margin-top: 15rem;
-}
+  .action h1 {
+      text-align: center;
+      line-height: 25px;
+      margin-bottom: 0.5rem;
+  }
 
-.action h1 {
-    text-align: center;
-    line-height: 25px;
-    margin-bottom: 0.5rem;
-}
+  .action p {
+      text-align: center;
+  }
 
-.action p {
-    text-align: center;
-}
+  .action .the-button {
+      margin: 2rem;
+      outline: none;
+      border-style: none;
+      border-radius: 2rem;
+      height: 3rem;
+      width: 12rem;
+      color: white;
+      background-color: var(--botton-background);
+  }
 
-.action .the-button {
-    margin: 2rem;
-    outline: none;
-    border-style: none;
-    border-radius: 2rem;
-    height: 3rem;
-    width: 12rem;
-    color: white;
-    background-color: var(--botton-background);
-}
+  /* Disclaimer
+      =======================================*/
+  .disclaimer {
+      margin: var(--header-section-margin);
+  }
 
-/* Disclaimer
-    =======================================*/
-.disclaimer {
-    margin: var(--header-section-margin);
-}
+  .disclaimer p {
+      line-height: 1.5rem;
+      text-align: center;
+      max-width: 40rem;
+  }
 
-.disclaimer p {
-    line-height: 1.5rem;
-    text-align: center;
-    max-width: 40rem;
-}
+  @media screen and (max-width: 480px) {
 
-@media screen and (max-width: 480px) {
+      header {
+          background-position-x: -450px;
+      }
 
-    header {
-        background-position-x: -450px;
-    }
+      /* Nav
+          ===================================*/
+      .banner nav {
+          opacity: 0;
+      }
 
-    /* Nav
-        ===================================*/
-    .banner nav {
-        opacity: 0;
-    }
+      .banner {
+          flex-direction: column;
+          justify-content: center;
+      }
 
-    .banner {
-        flex-direction: column;
-        justify-content: center;
-    }
+      .banner .menu-button {
+          position: absolute;
+          left: 1rem;
+          top: 2.5rem;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+      }
 
-    .banner .menu-button {
-        position: absolute;
-        left: 1rem;
-        top: 2.5rem;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-    }
+      .banner .menu-button .button-middle {
+          background-color: white;
+          width: 1.33rem;
+          height: 0.25rem;
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+      }
 
-    .banner .menu-button .button-middle {
-        background-color: white;
-        width: 1.33rem;
-        height: 0.25rem;
-        margin-top: 0.25rem;
-        margin-bottom: 0.25rem;
-    }
+      .banner .menu-button .button-top {
+          background-color: white;
+          width: 2rem;
+          height: 0.25rem;
+      }
 
-    .banner .menu-button .button-top {
-        background-color: white;
-        width: 2rem;
-        height: 0.25rem;
-    }
+      .banner .menu-button .button-bottom {
+          background-color: white;
+          width: 2rem;
+          height: 0.25rem;
+      }
 
-    .banner .menu-button .button-bottom {
-        background-color: white;
-        width: 2rem;
-        height: 0.25rem;
-    }
+      span[class^="button-"] {
+          border-radius: 5px;
+          transform-origin: left;
+          transition: transform .51s ease;
+      }
 
-    span[class^="button-"] {
-        border-radius: 5px;
-        transform-origin: left;
-        transition: transform .51s ease;
-    }
+      /* Menu Button Checked
+          ====================================*/
+      .banner .menu-cb:checked + .menu-button .button-middle{
+          transform: scaleX(0);
+      }
 
-    /* Menu Button Checked
-        ====================================*/
-    .banner .menu-cb:checked + .menu-button .button-middle{
-        transform: scaleX(0);
-    }
+      .banner .menu-cb:checked + .menu-button .button-top{
+          transform: rotate(45deg);
+      }
 
-    .banner .menu-cb:checked + .menu-button .button-top{
-        transform: rotate(45deg);
-    }
+      .banner .menu-cb:checked + .menu-button .button-bottom{
+          transform: translateY(0.4rem) rotate(-45deg);
+          
+      }
 
-    .banner .menu-cb:checked + .menu-button .button-bottom{
-        transform: translateY(0.4rem) rotate(-45deg);
-        
-    }
+      .banner .menu-cb:checked ~ nav {
+          opacity: 100;
+          display: flex;
+          justify-content: center;
+      }
 
-    .banner .menu-cb:checked ~ nav {
-        opacity: 100;
-        display: flex;
-        justify-content: center;
-    }
+      .nav-menu .nav-item {
+          margin-bottom: 2rem;
+      }
 
-    .nav-menu .nav-item {
-        margin-bottom: 2rem;
-    }
+      /* Action
+          ================================================*/
+      .action {
+          margin-top: 2rem;
+      }
 
-    /* Action
-        ================================================*/
-    .action {
-        margin-top: 2rem;
-    }
+  }
 
-}
+  @media screen and (min-width: 481px) {
 
-@media screen and (min-width: 481px) {
+      header {
+          background-position: center top;
+          background-size: cover;
+      }
 
-    header {
-        background-position: center top;
-        background-size: cover;
-    }
+      .banner {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 1rem;
+      }
 
-    .banner {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 1rem;
-    }
+      .banner .logo {
+          margin: auto;
+          margin-left: 10%;
+          margin-right: auto
+      }
 
-    .banner .logo {
-        margin: auto;
-        margin-left: 10%;
-        margin-right: auto
-    }
+      .banner nav {
+          margin-right: 10%;
+      }
 
-    .banner nav {
-        margin-right: 10%;
-    }
+      .banner nav .nav-menu{
+          display: flex;
+          flex-direction: row;
+      }
 
-    .banner nav .nav-menu{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .nav-menu .nav-item {
-        margin-left: 2rem;
-    }
-}
+      .nav-menu .nav-item {
+          margin-left: 2rem;
+      }
+  }
