@@ -1,0 +1,444 @@
+/* desktop width 1400px */
+
+:root {
+    --font-family: source-sans-pro, spin-cycle-ot, Arial;
+    --light-red:  #FF6565;
+    --botton-background: #FF6565;
+    --color-white: #FFFFFF;
+    --font-normal: 16px;
+    --logo-base-height: 4rem;
+    --logo-base-width: 22.56rem;
+    --header-section-margin: 0 1rem 0;
+    --max-width: 40rem;
+    --button-filter: drop-shadow( 0rem .25rem .25rem rgba(0, 0, 0, 0.25));
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: source-sans-pro;
+    src: url(assets/fonts/source-sans-pro/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: spin-cycle-ot;
+    src: url(assets/fonts/spincycle_ot/spincycle_ot.otf);
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Section */
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 4rem;
+      height: 54.3rem;
+      background-image: url(assets/images/headphones_hero_1.jpg);
+      background-repeat: no-repeat;
+  }
+
+  header p, header a {
+      color: var(--color-white);
+      font-size: var(--font-normal);
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+  }
+
+  header ul {
+      list-style-type: none;
+  }
+
+  header h1 {
+      color: var(--color-white);
+      margin: 0;
+      padding: 0;
+  }
+
+  .the-button:hover {
+      opacity: 0.9;
+  }
+
+  /* Nav
+      ====================================*/
+
+  .banner .menu-cb {
+      display: none;
+  }
+
+  .banner .logo {
+      width: calc(var(--logo-base-width) / 2);
+      height: calc(var(--logo-base-height) / 2);
+      margin: 2rem 2rem 0;
+  }
+
+  .nav-menu .nav-item a:hover {
+      color: var(--light-red);
+  }
+
+  /* Action
+      ======================================*/
+
+  .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: var(--header-section-margin);
+      margin-top: 15rem;
+  }
+
+  .action h1 {
+      text-align: center;
+      line-height: 25px;
+      margin-bottom: 0.5rem;
+  }
+
+  .action p {
+      text-align: center;
+  }
+
+  .action .the-button, .the-button {
+      margin: 2rem;
+      outline: none;
+      border-style: none;
+      border-radius: 2rem;
+      height: 3rem;
+      width: 12rem;
+      color: var(--color-white);
+      background-color: var(--botton-background);
+      filter: var(--button-filter);
+  }
+
+  /* Disclaimer
+      =======================================*/
+  .disclaimer {
+      margin: var(--header-section-margin);
+  }
+
+  .disclaimer p {
+      line-height: 1.5rem;
+      text-align: center;
+      max-width: var(--max-width);
+  }
+
+  @media screen and (max-width: 480px) {
+
+      header {
+          width: 100vw;
+          background-position-x: -450px;
+      }
+
+      /* Nav
+          ===================================*/
+      .banner nav {
+          opacity: 0;
+      }
+
+      .banner {
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      .banner .menu-button {
+          position: absolute;
+          left: 1rem;
+          top: 2.5rem;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .banner .menu-button .button-middle {
+          width: 1.33rem;
+          height: 0.25rem;
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+      }
+
+      .banner .menu-button .button-top {
+          width: 2rem;
+          height: 0.25rem;
+      }
+
+      .banner .menu-button .button-bottom {
+          width: 2rem;
+          height: 0.25rem;
+      }
+
+      span[class^="button-"] {
+          background-color: var(--color-white);
+          border-radius: 5px;
+          transform-origin: left;
+          transition: transform .51s ease;
+      }
+
+      /* Menu Button Checked
+          ====================================*/
+      .banner .menu-cb:checked + .menu-button .button-middle{
+          transform: scaleX(0);
+      }
+
+      .banner .menu-cb:checked + .menu-button .button-top{
+          transform: rotate(45deg);
+      }
+
+      .banner .menu-cb:checked + .menu-button .button-bottom{
+          transform: translateY(0.4rem) rotate(-45deg);
+          
+      }
+
+      .banner .menu-cb:checked ~ nav {
+          opacity: 100;
+          display: flex;
+          justify-content: center;
+      }
+
+      .nav-menu .nav-item {
+          margin-bottom: 2rem;
+      }
+
+      /* Action
+          ================================================*/
+      .action {
+          margin-top: 2rem;
+      }
+
+  }
+
+  @media screen and (min-width: 481px) {
+
+      header {
+          background-position: center top;
+          background-size: cover;
+      }
+
+      .banner {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 1rem;
+      }
+
+      .banner .logo {
+          margin: auto;
+          margin-left: 10%;
+          margin-right: auto
+      }
+
+      .banner nav {
+          margin-right: 10%;
+      }
+
+      .banner nav .nav-menu{
+          display: flex;
+          flex-direction: row;
+      }
+
+      .nav-menu .nav-item {
+          margin-left: 2rem;
+      }
+  }
+
+/* Section: What we do
+    =====================================*/
+
+  .what-we-do {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10rem;
+      align-items: center;
+  }
+
+  .wwd-intro {
+    max-width: var(--max-width);
+    margin: var(--header-section-margin);
+    margin-top: 7rem;
+    text-align: center;
+  }
+
+  .wwd-cards {
+      margin-top: 5rem;
+  }
+
+  .wwd-cards .card-item { 
+    text-align: center;
+    max-width: var(--max-width);
+    margin-top: 7rem;
+  }
+
+  span[class^="holberton_school-icon"] {
+      font-size: 6rem;
+      color: var(--light-red);
+  }
+
+  .card-item p {
+      max-width: 13rem;
+      margin: auto;
+  }
+
+  @media screen and (min-width: 481px) {
+    .wwd-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .wwd-cards .card-item {
+        margin: 0 2rem 2rem;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+
+    .wwd-cards {
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    
+    .wwd-cards .card-item {
+        margin-top: 0;
+    }
+  }
+
+/* Section: Part 3
+    ======================================*/
+  
+  .part-3 {
+    min-height: 40rem;
+    width: 100%;
+    max-height: 93.2rem;
+    background-image: url(assets/images/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .part-3 .part3-intro {
+      padding-top: 7.8rem;
+      margin: 7.8rem 2.25rem 4rem;
+      color: var(--color-white);
+      text-align: center;
+  }
+
+  .part-3 .part3-intro h1 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  .rates {
+      display: flex;
+      flex-direction: column;
+      /* height: 100%; */
+  }
+
+  .rates .rate-list {
+      text-align: center;
+      color: var(--color-white);
+      list-style-type: none;
+      margin: auto;
+      padding: 0;
+  }
+
+  .rates .rate-list .rate-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url(assets/images/pentagone.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 12rem;
+      height: 12rem;
+      margin-bottom: 2.6rem;
+  }
+
+  .rate-item h2 {
+      margin: 25% 0 0;
+      font-size: 3rem;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .rates .rate-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto 10rem;
+        justify-content: space-evenly;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .part3-intro p {
+        width: 75%;
+        margin: auto;
+    }
+    .rates .rate-list {
+          display: flex;
+          justify-content: space-around;
+          width: 100%
+    }
+  }
+
+/* Section: Contact Us
+    =======================================================*/
+    .contact-us {
+        min-height: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: xx-large;
+    }
+
+    .contact-us .contact-form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        min-width: 100%;
+    }
+
+    .contact-form .input-item {
+        margin: 1rem;
+    }
+
+    .input-item input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+
+    .input-item input::placeholder {
+        color: black;
+        font-size: var(--font-normal);
+        font-weight: bolder;
+        margin: 0.5rem;
+    }
+
+    @media screen and (min-width: 640px) {
+        .contact-us .contact-form {
+            min-width: 40rem;
+        }
+    }
+
+/* Section: 
+    ==========================================================*/
