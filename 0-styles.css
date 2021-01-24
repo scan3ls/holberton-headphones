@@ -242,6 +242,7 @@ a {
       }
 
       .banner nav .nav-menu{
+          padding: 0;
           display: flex;
           flex-direction: row;
       }
